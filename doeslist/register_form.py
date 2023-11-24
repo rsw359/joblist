@@ -9,7 +9,7 @@ import re
 class User_Registration_Form(UserCreationForm):
     email = forms.EmailField(required=True)
 
-    def clean_password1(self):
+    def clean_password1(self): #validates password length and complexity
         password1 = self.cleaned_data.get('password1')
         if len(password1) < 8:
             raise ValidationError("Password must be at least 8 characters long.")
