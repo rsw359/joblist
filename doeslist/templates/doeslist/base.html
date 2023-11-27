@@ -1,0 +1,28 @@
+<!-- FILEPATH: /Users/roger/builds/joblist/doeslist/templates/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{% block title %}Joblist {% endblock %}</title>
+	</head>
+	<body>
+		<header id="header">
+			<div class="header-left">
+				<h1>Joblist</h1>
+			</div>
+
+			<div class="header-right">
+				<button class="search-button">Search</button>
+				<button class="logout-button">Logout</button>
+			</div>
+		</header>
+
+		<div id="content">{% block content %}{% endblock %}</div>
+
+		<div id="footer">
+			<p>&copy; 2023 My Django App</p>
+		</div>
+	</body>
+</html>
