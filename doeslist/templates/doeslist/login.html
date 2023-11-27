@@ -1,0 +1,10 @@
+<!--doeslist/login.html-->
+
+{% extends 'doeslist/base.html' %} {% block title %}Login{% endblock %}
+<h2>Login</h2>
+{% block content %}
+<form method="post" action="{% url 'login' %}">
+	{% csrf_token %} {{ form.as_p }}
+	<input type="submit" value="Login" />
+</form>
+{% endblock %}
